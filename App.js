@@ -215,7 +215,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#030712',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: Platform.OS === 'web' ? '100vh' : '100%',
+    minHeight: '100%',
     padding: 20
   },
   phoneMockup: {
@@ -227,7 +227,11 @@ const styles = StyleSheet.create({
     borderColor: '#1e293b',
     overflow: 'hidden',
     padding: 16,
-    boxShadow: '0 25px 50px rgba(0,0,0,0.8)'
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 25 },
+    shadowOpacity: 0.8,
+    shadowRadius: 50,
+    elevation: 24
   },
   notch: {
     width: 110,
@@ -245,7 +249,7 @@ const styles = StyleSheet.create({
   greenDot: { width: 6, height: 6, backgroundColor: '#10b981', borderRadius: 3, marginRight: 5 },
   networkText: { fontSize: 10, color: '#38bdf8', fontWeight: '700' },
   
-  assetCard: { background: 'linear-gradient(135deg, #0f172a, #1e1b4b)', backgroundColor: '#0f172a', borderRadius: 16, padding: 14, marginBottom: 12, borderWidth: 1, borderColor: '#312e81' },
+  assetCard: { backgroundColor: '#1e1b4b', borderRadius: 16, padding: 14, marginBottom: 12, borderWidth: 1, borderColor: '#312e81' },
   assetLabel: { fontSize: 11, color: '#94a3b8' },
   assetAmount: { fontSize: 24, fontWeight: '800', color: '#fff', marginTop: 3 },
   usdtUnit: { fontSize: 13, color: '#38bdf8' },
